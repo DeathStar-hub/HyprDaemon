@@ -1,0 +1,23 @@
+{
+  "session_info": {
+    "file": "/home/nemesis/AI/test-conversation-122727.json",
+    "title": "session-test-conversation-122727",
+    "start_time": "2025-12-31T12:27:28.407996",
+    "end_time": "2025-12-31T12:27:34.442616",
+    "duration": "0:00:06.034383"
+  },
+  "statistics": {
+    "total_commands": 0,
+    "files_modified": 0,
+    "total_errors": 0,
+    "accomplishments_count": 0,
+    "failures_count": 0
+  },
+  "accomplishments": [],
+  "failures": [],
+  "detailed_logs": {
+    "commands_executed": [],
+    "files_modified": [],
+    "errors_encountered": []
+  }
+}

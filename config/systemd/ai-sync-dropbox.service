@@ -1,0 +1,10 @@
+[Unit]
+Description=Sync AI directory to Dropbox for Perplexity access
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/nemesis/AI/scripts/tools/sync-to-dropbox.sh --auto
+WorkingDirectory=/home/nemesis/AI
+
+[Install]
+WantedBy=default.target

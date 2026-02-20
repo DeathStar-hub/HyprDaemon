@@ -1,0 +1,9 @@
+[Unit]
+Description=Battery Power Logging Service
+Wants=battery-log.timer
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/waybar/scripts/battery-log.sh
+StandardOutput=null
+StandardError=null

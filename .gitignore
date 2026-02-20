@@ -1,0 +1,22 @@
+# Syncthing sync conflicts
+*.sync-conflict*
+.stfolder
+
+# Session files (optional - comment out if you want to track these)
+convo/**/*.md
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Archives (keep these in backups/ only)
+*.tar.gz
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Fish shell history (if any)
+*.fish_history

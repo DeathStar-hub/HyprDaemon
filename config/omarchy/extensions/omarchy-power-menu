@@ -1,0 +1,8 @@
+#!/bin/bash
+# Power menu wrapper - ensures proper environment and focus
+export PATH="$HOME/.local/share/omarchy/bin:$PATH"
+export DISPLAY="$DISPLAY"
+export WAYLAND_DISPLAY="$WAYLAND_DISPLAY"
+
+# Give window time to appear and get focus
+omarchy-menu system

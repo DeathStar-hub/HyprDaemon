@@ -1,0 +1,145 @@
+@import "../omarchy/current/theme/waybar.css";
+
+/* === Make the bar itself transparent === */
+window#waybar {
+    background: transparent;
+    border: none;
+}
+
+/* === Remove background from all modules === */
+* {
+    background: transparent; /* FULLY transparent */
+    color: @foreground;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: 'FiraCode Nerd Font';
+    font-size: 13px;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+}
+
+/* === Optional: Frosted glass for specific modules === */
+#temperature {
+    background: rgba(40, 42, 54, 0.6);
+    border-radius: 8px;
+    padding: 0 8px;
+    margin: 0 4px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#cpu,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#temperature,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 17px;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#temperature {
+background: @background-primary;
+color: @foreground;
+border-radius: 0 12px 12px 0;
+padding: 8px 12px;
+}
+
+#temperature.critical {
+background: @blue;
+color: @red;
+}
+
+#custom-expand-icon {
+  margin-right: 18px;
+}
+
+tooltip {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid @border;
+  background: @background;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+#clock {
+  margin-left: 5px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 5px;
+  font-size: 10px;
+  padding-bottom: 1px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#custom-cpu-spark {
+    font-family: "FiraCode Nerd Font", monospace;
+    font-size: 13px;
+    color: #8be9fd;          /* your cyan */
+    padding: 0 6px;
+    min-width: 60px;         /* enough room for ~30 chars */
+}
+
+#custom-gpu-spark {
+    font-family: "FiraCode Nerd Font", monospace;
+    font-size: 13px;
+    color: #8be9fd;          /* your cyan */
+    padding: 0 6px;
+    min-width: 60px;         /* enough room for ~30 chars */
+}
+
+#custom-weather { color: #8be9fd; padding: 0 6px; }
+
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}

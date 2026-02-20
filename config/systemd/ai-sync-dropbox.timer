@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for AI directory sync to Dropbox
+
+[Timer]
+OnUnitActiveSec=30min
+OnBootSec=5min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

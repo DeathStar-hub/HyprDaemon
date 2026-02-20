@@ -1,0 +1,18 @@
+# Waybar Config Changes
+
+## Add to modules-center (line ~8)
+```json
+"custom/backup-status",
+```
+
+## Add to end of config (before final closing brace)
+```json
+  "custom/backup-status": {
+    "exec": "~/.config/backups/waybar-backup-status.sh",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 300,
+    "on-click": "~/.config/backups/backup-now.sh",
+    "tooltip": true
+  },
+```

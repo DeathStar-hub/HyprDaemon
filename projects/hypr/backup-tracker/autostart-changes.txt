@@ -1,0 +1,11 @@
+# Autostart.conf Changes
+
+## Add to ~/.config/hypr/autostart.conf
+
+```conf
+# Session backup tracker
+exec-once = ~/.config/backups/backup-tracker.sh --record
+
+# Backup notification (delayed to show after other startup items)
+exec-once = sleep 3 && notify-send -u normal "🔄 Session Backup Status" "$($HOME/.config/backups/backup-tracker.sh --status)"
+```

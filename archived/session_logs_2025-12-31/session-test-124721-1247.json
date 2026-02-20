@@ -1,0 +1,10 @@
+{
+  "info": {"title": "Test conversation - ok did you get anything logged"},
+  "messages": [
+    {
+      "info": {"role": "user"},
+      "parts": [{"type": "text", "text": "This is a test to verify multi-instance logger is working"}]
+    }
+  ]
+}
+EOF'
