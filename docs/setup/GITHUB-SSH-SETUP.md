@@ -5,6 +5,19 @@ Set up SSH key for AI to access GitHub repos (push/pull) on a new computer. Key 
 
 ---
 
+## Step 0: Set Git Identity (CRITICAL)
+
+Before making any commits, set the AI's identity:
+
+```bash
+git config --global user.email "m00wilson00@gmail.com"
+git config --global user.name "Nemesis"
+```
+
+**Why?** This allows the AI to save (commit) changes to GitHub. Without this, the AI can read from GitHub but cannot save changes.
+
+---
+
 ## Step 1: Install Required Packages
 
 ```bash
