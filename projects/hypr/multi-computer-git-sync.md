@@ -3,6 +3,8 @@
 ## Overview
 Synchronize the ~/AI folder across multiple computers using **Git + SSH** to eliminate Syncthing sync conflicts and maintain version history across all machines.
 
+**⚠️ Important:** Each computer requires its own SSH key to be **manually added to GitHub** (one-time setup per computer). See [What AI Can Do vs What YOU Must Do](#what-ai-can-do-vs-what-you-must-do) below.
+
 ## The Problem with Syncthing-Only Sync
 
 ### Before (Syncthing Only)
@@ -69,6 +71,20 @@ All versions preserved in git history
 
 ---
 
+## What AI Can Do vs What YOU Must Do
+
+| Task | Who Does It | Why |
+|------|-------------|-----|
+| Generate SSH key on computer | ✅ AI can do this | Just runs a command |
+| Copy public key output | ✅ AI can do this | Just displays text |
+| **Add key to GitHub website** | ❌ **YOU must do this** | AI cannot access your GitHub account |
+| Test SSH connection | ✅ AI can do this | Runs after you add key |
+| Git push/pull operations | ✅ AI can do this | Works after setup complete |
+
+**Bottom line:** You only need to paste the SSH key into GitHub once per computer. Everything else AI handles!
+
+---
+
 ## Setup Procedure for New Computer
 
 ### Step 1: Sync ~/AI Folder via Syncthing
@@ -91,16 +107,28 @@ ssh-keygen -t ed25519 -C "$(whoami)@$(hostname)"
 - `~/.ssh/id_ed25519` (private key - KEEP SECRET)
 - `~/.ssh/id_ed25519.pub` (public key - add to GitHub)
 
-### Step 3: Add Public Key to GitHub
-1. Go to: https://github.com/settings/keys
-2. Click **New SSH key**
-3. **Title:** Use the computer name (e.g., `Laptop`, `Work-PC`, `NUC`)
-4. **Key type:** Authentication key
-5. **Key:** Paste contents of `~/.ssh/id_ed25519.pub`
+### Step 3: Add Public Key to GitHub ⚠️ **REQUIRED MANUAL STEP**
+
+**⚠️ IMPORTANT:** This step MUST be done manually by YOU. The AI cannot access GitHub settings.
+
+1. **Get your public key:**
    ```bash
    cat ~/.ssh/id_ed25519.pub
    ```
-6. Click **Add SSH key**
+   **Copy the entire output** (starts with `ssh-ed25519`)
+
+2. **Go to GitHub:** https://github.com/settings/keys
+
+3. Click **New SSH key**
+
+4. **Fill in the form:**
+   - **Title:** Use the computer name (e.g., `Laptop`, `Work-PC`, `NUC`)
+   - **Key type:** Authentication key
+   - **Key:** Paste the public key you copied in step 1
+
+5. Click **Add SSH key**
+
+**✅ This is a one-time setup per computer. After this, AI can push/pull without credentials!**
 
 ### Step 4: Test SSH Connection
 ```bash
