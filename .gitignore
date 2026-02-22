@@ -2,8 +2,13 @@
 *.sync-conflict*
 .stfolder
 
-# Session files (optional - comment out if you want to track these)
-convo/**/*.md
+# Session files - keep these private (not tracked in git)
+# BUT track the structure and summaries:
+convo/2026-*/session-*.md
+convo/groups/*.md
+!convo/index.md
+!convo/ORGANIZE-INSTRUCTIONS.md
+!convo/groups/
 
 # Temporary files
 *.tmp

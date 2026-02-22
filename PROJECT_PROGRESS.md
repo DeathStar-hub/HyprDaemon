@@ -745,6 +745,16 @@ Fixed broken `jl` command in Fish shell by migrating from broken autojump to wor
 ### Config Files Synced
 - `~/.config/fish/functions/jl.fish` - Updated to use zoxide
 
+### 2026-02-22 Update: jl Command - Simplified ls Output
+- **Change**: Changed `jl` command from `ls -Alh` to just `ls`
+- **Reason**: Simpler, cleaner output when jumping to directories
+- **Files Modified**:
+  - `~/.config/fish/functions/jl.fish` - Changed `ls -Alh` to `ls`
+- **Note for new computers**: Ensure zoxide is installed (`sudo pacman -S zoxide`) and create symlink:
+  ```bash
+  ln -sf /usr/bin/zoxide ~/.local/bin/zoxide
+  ```
+
 ### Benefits of Zoxide vs Autojump
 - **Speed**: Written in Rust, much faster than Python autojump
 - **Maintenance**: Actively maintained, autojump is deprecated/broken
